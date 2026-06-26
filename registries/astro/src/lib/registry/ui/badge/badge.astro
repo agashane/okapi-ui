@@ -1,0 +1,13 @@
+---
+import { cx } from "#styled-system/css";
+import type { HTMLAttributes } from "astro/types";
+import { badge, type BadgeVariants } from "./badge.recipe";
+
+type Props = HTMLAttributes<"span"> & BadgeVariants
+
+const { class: className, variant, size, pill, ...rest } = Astro.props
+const classes = cx(badge({ variant, size, pill }), className)
+---
+<span class={classes} {...rest}>
+  <slot />
+</span>

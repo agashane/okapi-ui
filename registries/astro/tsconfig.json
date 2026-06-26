@@ -5,7 +5,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "#/*": ["src/*"],
+      "#/*": ["*"],
       "#registry/*": ["src/lib/registry/*"],
       "#components/*": ["src/lib/components/*"],
       "#layouts/*": ["src/layouts/*"],
