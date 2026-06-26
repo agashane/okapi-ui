@@ -5,9 +5,9 @@ import { buttonVariants, type ButtonVariants } from "./button.recipe";
 
 type Props<Tag extends HTMLTag> = ButtonVariants & Polymorphic<{ as: Tag }>
 
-const { class: className, variant, size, ...rest } = Astro.props
+const { class: className, variant, size, iconOnly, pill, ...rest } = Astro.props
 const Tag = "href" in rest ? "a" : "button"
-const classes = cx(buttonVariants({ variant, size }), className)
+const classes = cx(buttonVariants({ variant, size, iconOnly, pill }), className)
 ---
 <Tag class={classes} {...rest}>
   <slot />

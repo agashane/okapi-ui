@@ -1,0 +1,30 @@
+{
+  "name": "@okapi-ui/panda-preset",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@pandacss/dev": "catalog:",
+    "tsdown": "^0.22.3"
+  },
+  "peerDependencies": {
+    "@pandacss/dev": "catalog:"
+  }
+}

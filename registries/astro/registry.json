@@ -1,5 +1,6 @@
 {
 	"name": "@okapi-ui/astro",
+	"version": "0.0.1",
 	"type": "repository",
 	"defaultPaths": {
 		"component": "src/lib/components",

@@ -1,8 +1,9 @@
 import { defineConfig, fs, jsrepo, repository } from "jsrepo";
+import { bun } from "@jsrepo/bun";
 
 export default defineConfig({
   registry: {
-    name: "@okapiui/astro",
+    name: "@okapi-ui/astro",
     version: "0.0.1",
     items: [
       {
@@ -46,9 +47,13 @@ export default defineConfig({
   // configure where stuff comes from here
   registries: ["fs://./"],
   paths: {
-    component: "src/lib/components",
-    block: "src/lib/components/block",
-    ui: "src/lib/components/ui",
+    component: 'src/lib/components',
+    block: 'src/lib/components/block',
+    ui: 'src/lib/components/ui',
+  },
+
+  build: {
+    remoteDependencyResolver: bun(),
   },
   // configure where stuff goes here
 });

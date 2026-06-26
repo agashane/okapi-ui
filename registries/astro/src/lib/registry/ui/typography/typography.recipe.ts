@@ -2,8 +2,8 @@ import { cva, type RecipeVariantProps } from "#styled-system/css";
 
 export const textVariants = cva({
   base: {
-    colorPalette: "gray",
-    color: "colorPalette.700",
+    colorPalette: "neutral",
+    color: "colorPalette.fg",
   },
   variants: {
     size: {
@@ -20,7 +20,7 @@ export const textVariants = cva({
       bold: { fontWeight: "bold" },
     },
     muted: {
-      true: { color: "colorPalette.500" },
+      true: { color: "colorPalette.muted" },
     },
     lead: {
       true: { fontSize: "lg", lineHeight: "1.75" },

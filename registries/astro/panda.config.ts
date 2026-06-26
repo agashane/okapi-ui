@@ -1,6 +1,10 @@
 import { defineConfig } from "@pandacss/dev";
+import { okapiUiPreset } from "@okapi-ui/panda-preset";
+import pandaPreset from "@pandacss/preset-panda";
 
 export default defineConfig({
+  presets: [pandaPreset, okapiUiPreset],
+
   // Whether to use css reset
   preflight: true,
 
