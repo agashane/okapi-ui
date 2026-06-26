@@ -1,0 +1,13 @@
+---
+import { cx } from "#styled-system/css";
+import type { HTMLAttributes } from "astro/types";
+import { linkVariants, type LinkVariants } from "./link.recipe";
+
+type Props = HTMLAttributes<"a"> & LinkVariants
+
+const { class: className, variant, ...rest } = Astro.props
+const classes = cx(linkVariants({ variant }), className)
+---
+<a class={classes} {...rest}>
+  <slot />
+</a>

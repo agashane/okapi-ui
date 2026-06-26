@@ -1,0 +1,13 @@
+---
+import { cx } from "#styled-system/css";
+import type { HTMLAttributes } from "astro/types";
+import { card } from "./card.recipe";
+
+type Props = HTMLAttributes<"div">
+
+const { class: className, ...rest } = Astro.props
+const classes = cx(card().body, className)
+---
+<div class={classes} {...rest}>
+  <slot />
+</div>

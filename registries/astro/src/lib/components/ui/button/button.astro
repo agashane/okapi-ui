@@ -1,0 +1,14 @@
+---
+import { cx } from "#styled-system/css";
+import type { HTMLTag, Polymorphic } from "astro/types";
+import { buttonVariants, type ButtonVariants } from "./button.recipe";
+
+type Props<Tag extends HTMLTag> = ButtonVariants & Polymorphic<{ as: Tag }>
+
+const { class: className, variant, size, ...rest } = Astro.props
+const Tag = "href" in rest ? "a" : "button"
+const classes = cx(buttonVariants({ variant, size }), className)
+---
+<Tag class={classes} {...rest}>
+  <slot />
+</Tag>

@@ -1,0 +1,14 @@
+{
+  "name": "@okapi-ui/repo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "workspaces": [
+    "registries/*"
+  ],
+  "scripts": {},
+  "packageManager": "bun@1.3.14"
+}

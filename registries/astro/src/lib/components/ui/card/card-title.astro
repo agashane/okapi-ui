@@ -1,0 +1,9 @@
+---
+import type { ComponentProps } from "astro/types";
+import { Heading } from "../heading";
+
+type Props = ComponentProps<typeof Heading>
+
+const {...rest} = Astro.props
+---
+<Heading {...rest}><slot /></Heading>

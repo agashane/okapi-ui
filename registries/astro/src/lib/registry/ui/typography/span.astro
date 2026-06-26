@@ -1,0 +1,13 @@
+---
+import { cx } from "#styled-system/css";
+import type { HTMLAttributes } from "astro/types";
+import { textVariants, type TextVariants } from "./typography.recipe";
+
+type Props = HTMLAttributes<"span"> & TextVariants
+
+const { class: className, size, weight, muted, lead, ...rest } = Astro.props
+const classes = cx(textVariants({ size, weight, muted, lead }), className)
+---
+<span class={classes} {...rest}>
+  <slot />
+</span>

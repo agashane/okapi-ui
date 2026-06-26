@@ -1,0 +1,420 @@
+{
+	"name": "@okapi-ui/astro",
+	"type": "repository",
+	"defaultPaths": {
+		"component": "src/lib/components",
+		"block": "src/lib/components/block",
+		"ui": "src/lib/components/ui"
+	},
+	"items": [
+		{
+			"name": "button",
+			"type": "ui",
+			"add": "when-added",
+			"registryDependencies": [],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "button/button.astro",
+					"relativePath": "src/lib/registry/ui/button/button.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "button/button.recipe.ts",
+					"relativePath": "src/lib/registry/ui/button/button.recipe.ts",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "button/index.ts",
+					"relativePath": "src/lib/registry/ui/button/index.ts",
+					"_imports_": [
+						{
+							"import": "./button.astro",
+							"item": "button",
+							"file": {
+								"type": "ui",
+								"path": "button/button.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./button.recipe.ts",
+							"item": "button",
+							"file": {
+								"type": "ui",
+								"path": "button/button.recipe.ts"
+							},
+							"meta": {}
+						}
+					],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
+			"name": "card",
+			"type": "ui",
+			"add": "when-added",
+			"registryDependencies": [],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "card/card-body.astro",
+					"relativePath": "src/lib/registry/ui/card/card-body.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "card/card-description.astro",
+					"relativePath": "src/lib/registry/ui/card/card-description.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "card/card-footer.astro",
+					"relativePath": "src/lib/registry/ui/card/card-footer.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "card/card-header.astro",
+					"relativePath": "src/lib/registry/ui/card/card-header.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "card/card-title.astro",
+					"relativePath": "src/lib/registry/ui/card/card-title.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "card/card.astro",
+					"relativePath": "src/lib/registry/ui/card/card.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "card/card.recipe.ts",
+					"relativePath": "src/lib/registry/ui/card/card.recipe.ts",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "card/index.ts",
+					"relativePath": "src/lib/registry/ui/card/index.ts",
+					"_imports_": [
+						{
+							"import": "./card.astro",
+							"item": "card",
+							"file": {
+								"type": "ui",
+								"path": "card/card.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./card-header.astro",
+							"item": "card",
+							"file": {
+								"type": "ui",
+								"path": "card/card-header.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./card-body.astro",
+							"item": "card",
+							"file": {
+								"type": "ui",
+								"path": "card/card-body.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./card-footer.astro",
+							"item": "card",
+							"file": {
+								"type": "ui",
+								"path": "card/card-footer.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./card-title.astro",
+							"item": "card",
+							"file": {
+								"type": "ui",
+								"path": "card/card-title.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./card-description.astro",
+							"item": "card",
+							"file": {
+								"type": "ui",
+								"path": "card/card-description.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./card.recipe.ts",
+							"item": "card",
+							"file": {
+								"type": "ui",
+								"path": "card/card.recipe.ts"
+							},
+							"meta": {}
+						}
+					],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
+			"name": "heading",
+			"type": "ui",
+			"add": "when-added",
+			"registryDependencies": [],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "heading/heading.astro",
+					"relativePath": "src/lib/registry/ui/heading/heading.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "heading/heading.recipe.ts",
+					"relativePath": "src/lib/registry/ui/heading/heading.recipe.ts",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "heading/index.ts",
+					"relativePath": "src/lib/registry/ui/heading/index.ts",
+					"_imports_": [
+						{
+							"import": "./heading.astro",
+							"item": "heading",
+							"file": {
+								"type": "ui",
+								"path": "heading/heading.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./heading.recipe.ts",
+							"item": "heading",
+							"file": {
+								"type": "ui",
+								"path": "heading/heading.recipe.ts"
+							},
+							"meta": {}
+						}
+					],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
+			"name": "link",
+			"type": "ui",
+			"add": "when-added",
+			"registryDependencies": [],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "link/index.ts",
+					"relativePath": "src/lib/registry/ui/link/index.ts",
+					"_imports_": [
+						{
+							"import": "./link.astro",
+							"item": "link",
+							"file": {
+								"type": "ui",
+								"path": "link/link.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./link.recipe.ts",
+							"item": "link",
+							"file": {
+								"type": "ui",
+								"path": "link/link.recipe.ts"
+							},
+							"meta": {}
+						}
+					],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "link/link.astro",
+					"relativePath": "src/lib/registry/ui/link/link.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "link/link.recipe.ts",
+					"relativePath": "src/lib/registry/ui/link/link.recipe.ts",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
+			"name": "typography",
+			"type": "ui",
+			"add": "when-added",
+			"registryDependencies": [],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "typography/index.ts",
+					"relativePath": "src/lib/registry/ui/typography/index.ts",
+					"_imports_": [
+						{
+							"import": "./text.astro",
+							"item": "typography",
+							"file": {
+								"type": "ui",
+								"path": "typography/text.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./span.astro",
+							"item": "typography",
+							"file": {
+								"type": "ui",
+								"path": "typography/span.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./typography.recipe.ts",
+							"item": "typography",
+							"file": {
+								"type": "ui",
+								"path": "typography/typography.recipe.ts"
+							},
+							"meta": {}
+						}
+					],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "typography/span.astro",
+					"relativePath": "src/lib/registry/ui/typography/span.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "typography/text.astro",
+					"relativePath": "src/lib/registry/ui/typography/text.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "typography/typography.recipe.ts",
+					"relativePath": "src/lib/registry/ui/typography/typography.recipe.ts",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		}
+	]
+}

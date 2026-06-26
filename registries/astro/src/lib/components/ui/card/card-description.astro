@@ -1,0 +1,8 @@
+---
+import type { ComponentProps } from "astro/types";
+import {Text} from "../typography"
+
+type Props = ComponentProps<typeof Text>
+const { ...rest} = Astro.props
+---
+<Text {...rest}><slot /></Text>
