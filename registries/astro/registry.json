@@ -9,6 +9,65 @@
 	},
 	"items": [
 		{
+			"name": "badge",
+			"type": "ui",
+			"add": "when-added",
+			"registryDependencies": [],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "badge/badge.astro",
+					"relativePath": "src/lib/registry/ui/badge/badge.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "badge/badge.recipe.ts",
+					"relativePath": "src/lib/registry/ui/badge/badge.recipe.ts",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "badge/index.ts",
+					"relativePath": "src/lib/registry/ui/badge/index.ts",
+					"_imports_": [
+						{
+							"import": "./badge.astro",
+							"item": "badge",
+							"file": {
+								"type": "ui",
+								"path": "badge/badge.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./badge.recipe.ts",
+							"item": "badge",
+							"file": {
+								"type": "ui",
+								"path": "badge/badge.recipe.ts"
+							},
+							"meta": {}
+						}
+					],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
 			"name": "button",
 			"type": "ui",
 			"add": "when-added",
@@ -211,6 +270,160 @@
 							"file": {
 								"type": "ui",
 								"path": "card/card.recipe.ts"
+							},
+							"meta": {}
+						}
+					],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
+			"name": "empty",
+			"type": "ui",
+			"add": "when-added",
+			"registryDependencies": [],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "empty/empty-content.astro",
+					"relativePath": "src/lib/registry/ui/empty/empty-content.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "empty/empty-description.astro",
+					"relativePath": "src/lib/registry/ui/empty/empty-description.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "empty/empty-header.astro",
+					"relativePath": "src/lib/registry/ui/empty/empty-header.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "empty/empty-media.astro",
+					"relativePath": "src/lib/registry/ui/empty/empty-media.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "empty/empty-title.astro",
+					"relativePath": "src/lib/registry/ui/empty/empty-title.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "empty/empty.astro",
+					"relativePath": "src/lib/registry/ui/empty/empty.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "empty/empty.recipe.ts",
+					"relativePath": "src/lib/registry/ui/empty/empty.recipe.ts",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "empty/index.ts",
+					"relativePath": "src/lib/registry/ui/empty/index.ts",
+					"_imports_": [
+						{
+							"import": "./empty.astro",
+							"item": "empty",
+							"file": {
+								"type": "ui",
+								"path": "empty/empty.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./empty-header.astro",
+							"item": "empty",
+							"file": {
+								"type": "ui",
+								"path": "empty/empty-header.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./empty-content.astro",
+							"item": "empty",
+							"file": {
+								"type": "ui",
+								"path": "empty/empty-content.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./empty-media.astro",
+							"item": "empty",
+							"file": {
+								"type": "ui",
+								"path": "empty/empty-media.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./empty-title.astro",
+							"item": "empty",
+							"file": {
+								"type": "ui",
+								"path": "empty/empty-title.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./empty-description.astro",
+							"item": "empty",
+							"file": {
+								"type": "ui",
+								"path": "empty/empty-description.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./empty.recipe",
+							"item": "empty",
+							"file": {
+								"type": "ui",
+								"path": "empty/empty.recipe.ts"
 							},
 							"meta": {}
 						}

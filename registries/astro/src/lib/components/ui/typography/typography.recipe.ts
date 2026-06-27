@@ -4,12 +4,13 @@ export const textVariants = cva({
   base: {
     colorPalette: "neutral",
     color: "colorPalette.fg",
+    textWrap: "balance",
   },
   variants: {
     size: {
       xs: { fontSize: "xs", lineHeight: "1.25" },
       sm: { fontSize: "sm", lineHeight: "1.375" },
-      md: { fontSize: "md", lineHeight: "1.5" },
+      md: { fontSize: "base", lineHeight: "1.5" },
       lg: { fontSize: "lg", lineHeight: "1.5" },
       xl: { fontSize: "xl", lineHeight: "1.5" },
     },

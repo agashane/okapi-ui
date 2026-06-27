@@ -6,6 +6,7 @@
     "baseUrl": ".",
     "paths": {
       "#/*": ["*"],
+      "#lib/*": ["src/lib/*"],
       "#registry/*": ["src/lib/registry/*"],
       "#components/*": ["src/lib/components/*"],
       "#layouts/*": ["src/layouts/*"],

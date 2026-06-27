@@ -3,7 +3,7 @@ import Layout from "#layouts/index.astro";
 import { Button } from "#components/ui/button";
 import { css } from "#styled-system/css";
 import { container, hstack } from "#styled-system/patterns";
-import { Heading } from "#/lib/components/ui/heading";
+import { Heading } from "#lib/components/ui/heading";
 import {
     Card,
     CardHeader,
@@ -11,9 +11,17 @@ import {
     CardDescription,
     CardFooter,
     CardTitle,
-} from "#/lib/components/ui/card";
-import { Span, Text } from "#/lib/components/ui/typography";
-import { Link } from "#/lib/components/ui/link";
+} from "#lib/components/ui/card";
+import { Span, Text } from "#lib/components/ui/typography";
+import { Link } from "#lib/components/ui/link";
+import {
+    Empty,
+    EmptyHeader,
+    EmptyContent,
+    EmptyMedia,
+    EmptyTitle,
+    EmptyDescription,
+} from "#lib/components/ui/empty";
 ---
 
 <Layout>
@@ -31,7 +39,7 @@ import { Link } from "#/lib/components/ui/link";
                 <CardDescription>Card Description</CardDescription>
             </CardHeader>
             <CardBody>
-                <Text
+                <Text class={css({ colorPalette: "orange" })}
                     >Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     <Span muted>Odius</Span> repellendus sit rerum dicta fugiat, exercitationem
                     quas hic. Reprehenderit atque ex <Link
@@ -54,5 +62,21 @@ import { Link } from "#/lib/components/ui/link";
                 >
             </CardFooter>
         </Card>
+
+        <Empty>
+            <EmptyHeader>
+                <EmptyTitle> Nothing found </EmptyTitle>
+                <EmptyDescription>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo facilis cumque quidem quas, ipsam modi. A accusamus,
+                    asperiores repudiandae et obcaecati veritatis ipsum,
+                    voluptatibus eveniet corporis mollitia fugiat vitae non.
+                </EmptyDescription>
+            </EmptyHeader>
+            <EmptyContent>
+                <Button>New item</Button>
+                <Button variant="subtle">Another item</Button>
+            </EmptyContent>
+        </Empty>
     </div>
 </Layout>

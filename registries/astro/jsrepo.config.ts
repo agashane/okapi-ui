@@ -22,6 +22,11 @@ export default defineConfig({
         files: [{ path: "src/lib/registry/ui/card" }],
       },
       {
+        name: "empty",
+        type: "ui",
+        files: [{ path: "src/lib/registry/ui/empty" }],
+      },
+      {
         name: "heading",
         type: "ui",
         files: [{ path: "src/lib/registry/ui/heading" }],
@@ -52,9 +57,9 @@ export default defineConfig({
   // configure where stuff comes from here
   registries: ["fs://./"],
   paths: {
-    component: "src/lib/components",
-    block: "src/lib/components/block",
-    ui: "src/lib/components/ui",
+    component: 'src/lib/components',
+    block: 'src/lib/components/block',
+    ui: 'src/lib/components/ui',
   },
 
   build: {
