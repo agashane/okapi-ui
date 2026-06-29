@@ -1,0 +1,12 @@
+---
+import type { ComponentProps } from "astro/types";
+import { Heading } from "../heading";
+
+type Props = ComponentProps<typeof Heading>;
+
+const { as = "h4", level = "h4", ...props } = Astro.props;
+---
+
+<Heading data-slot="alert-dialog-title" as={as} level={level} {...props}>
+    <slot />
+</Heading>

@@ -1,0 +1,18 @@
+---
+import { cx } from "#styled-system/css";
+import type { HTMLAttributes } from "astro/types";
+import { alertDialogRecipe } from "./alert-dialog.recipe";
+
+type Props = HTMLAttributes<"div">;
+
+const { class: className, ...rest } = Astro.props;
+const classes = cx(alertDialogRecipe().root, className);
+---
+
+<div {...rest} class={classes} data-slot="alert-dialog"><slot /></div>
+
+<script>
+    import { create } from "@data-slot/alert-dialog";
+
+    create();
+</script>

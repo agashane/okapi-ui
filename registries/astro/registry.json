@@ -135,6 +135,255 @@
 			]
 		},
 		{
+			"name": "alert-dialog",
+			"type": "ui",
+			"add": "when-added",
+			"registryDependencies": [],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "alert-dialog/alert-dialog-action.astro",
+					"relativePath": "src/lib/registry/ui/alert-dialog/alert-dialog-action.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "alert-dialog/alert-dialog-cancel.astro",
+					"relativePath": "src/lib/registry/ui/alert-dialog/alert-dialog-cancel.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "alert-dialog/alert-dialog-content.astro",
+					"relativePath": "src/lib/registry/ui/alert-dialog/alert-dialog-content.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "alert-dialog/alert-dialog-description.astro",
+					"relativePath": "src/lib/registry/ui/alert-dialog/alert-dialog-description.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "alert-dialog/alert-dialog-footer.astro",
+					"relativePath": "src/lib/registry/ui/alert-dialog/alert-dialog-footer.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "alert-dialog/alert-dialog-header.astro",
+					"relativePath": "src/lib/registry/ui/alert-dialog/alert-dialog-header.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "alert-dialog/alert-dialog-overlay.astro",
+					"relativePath": "src/lib/registry/ui/alert-dialog/alert-dialog-overlay.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "alert-dialog/alert-dialog-portal.astro",
+					"relativePath": "src/lib/registry/ui/alert-dialog/alert-dialog-portal.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "alert-dialog/alert-dialog-title.astro",
+					"relativePath": "src/lib/registry/ui/alert-dialog/alert-dialog-title.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "alert-dialog/alert-dialog-trigger.astro",
+					"relativePath": "src/lib/registry/ui/alert-dialog/alert-dialog-trigger.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "alert-dialog/alert-dialog.astro",
+					"relativePath": "src/lib/registry/ui/alert-dialog/alert-dialog.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "alert-dialog/alert-dialog.recipe.ts",
+					"relativePath": "src/lib/registry/ui/alert-dialog/alert-dialog.recipe.ts",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "alert-dialog/index.ts",
+					"relativePath": "src/lib/registry/ui/alert-dialog/index.ts",
+					"_imports_": [
+						{
+							"import": "./alert-dialog.astro",
+							"item": "alert-dialog",
+							"file": {
+								"type": "ui",
+								"path": "alert-dialog/alert-dialog.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./alert-dialog-action.astro",
+							"item": "alert-dialog",
+							"file": {
+								"type": "ui",
+								"path": "alert-dialog/alert-dialog-action.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./alert-dialog-cancel.astro",
+							"item": "alert-dialog",
+							"file": {
+								"type": "ui",
+								"path": "alert-dialog/alert-dialog-cancel.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./alert-dialog-content.astro",
+							"item": "alert-dialog",
+							"file": {
+								"type": "ui",
+								"path": "alert-dialog/alert-dialog-content.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./alert-dialog-description.astro",
+							"item": "alert-dialog",
+							"file": {
+								"type": "ui",
+								"path": "alert-dialog/alert-dialog-description.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./alert-dialog-footer.astro",
+							"item": "alert-dialog",
+							"file": {
+								"type": "ui",
+								"path": "alert-dialog/alert-dialog-footer.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./alert-dialog-header.astro",
+							"item": "alert-dialog",
+							"file": {
+								"type": "ui",
+								"path": "alert-dialog/alert-dialog-header.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./alert-dialog-overlay.astro",
+							"item": "alert-dialog",
+							"file": {
+								"type": "ui",
+								"path": "alert-dialog/alert-dialog-overlay.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./alert-dialog-portal.astro",
+							"item": "alert-dialog",
+							"file": {
+								"type": "ui",
+								"path": "alert-dialog/alert-dialog-portal.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./alert-dialog-title.astro",
+							"item": "alert-dialog",
+							"file": {
+								"type": "ui",
+								"path": "alert-dialog/alert-dialog-title.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./alert-dialog-trigger.astro",
+							"item": "alert-dialog",
+							"file": {
+								"type": "ui",
+								"path": "alert-dialog/alert-dialog-trigger.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./alert-dialog.recipe",
+							"item": "alert-dialog",
+							"file": {
+								"type": "ui",
+								"path": "alert-dialog/alert-dialog.recipe.ts"
+							},
+							"meta": {}
+						}
+					],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
 			"name": "alert",
 			"type": "ui",
 			"add": "when-added",

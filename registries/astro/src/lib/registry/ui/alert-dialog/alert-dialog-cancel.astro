@@ -1,0 +1,11 @@
+---
+import type { ComponentProps } from "astro/types";
+import { Button } from "../button";
+
+type Props = ComponentProps<typeof Button>;
+const { variant = "outline", ...props } = Astro.props;
+---
+
+<Button variant={variant} data-slot="alert-dialog-trigger" {...props}>
+    <slot />
+</Button>

@@ -12,6 +12,11 @@ export default defineConfig({
         files: [{ path: "src/lib/registry/ui/accordion" }],
       },
       {
+        name: "alert-dialog",
+        type: "ui",
+        files: [{ path: "src/lib/registry/ui/alert-dialog" }],
+      },
+      {
         name: "alert",
         type: "ui",
         files: [{ path: "src/lib/registry/ui/alert" }],
