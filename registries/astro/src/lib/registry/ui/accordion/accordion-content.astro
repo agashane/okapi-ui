@@ -1,0 +1,14 @@
+---
+import { cx } from "#styled-system/css";
+import type { HTMLAttributes } from "astro/types";
+import { accordionRecipe } from "./accordion.recipe";
+
+type Props = HTMLAttributes<"div">;
+
+const { class: className, ...rest } = Astro.props;
+const classes = cx(accordionRecipe().content, className);
+---
+
+<div data-slot="accordion-content" {...rest} class={classes}>
+    <slot />
+</div>

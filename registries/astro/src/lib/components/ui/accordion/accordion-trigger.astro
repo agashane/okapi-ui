@@ -1,0 +1,18 @@
+---
+import { cx } from "#styled-system/css";
+import type { HTMLAttributes } from "astro/types";
+import { accordionRecipe } from "./accordion.recipe";
+import AccordionIndicator from "./accordion-indicator.astro";
+
+type Props = HTMLAttributes<"div">;
+
+const { class: className, ...rest } = Astro.props;
+const classes = cx(accordionRecipe().trigger, className);
+---
+
+<div data-slot="accordion-trigger" {...rest} class={classes}>
+    <div class={accordionRecipe().triggerBody}>
+        <slot />
+    </div>
+    <AccordionIndicator />
+</div>

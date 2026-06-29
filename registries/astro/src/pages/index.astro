@@ -30,6 +30,13 @@ import {
     AlertDescription,
     AlertIndicator,
 } from "#/src/lib/registry/ui/alert";
+
+import {
+    Accordion,
+    AccordionItem,
+    AccordionContent,
+    AccordionTrigger,
+} from "#lib/components/ui/accordion";
 ---
 
 <Layout>
@@ -41,6 +48,61 @@ import {
                 color: "warning.fg",
             })}>Welcome Astro</Heading
         >
+        <div class={hstack({ gap: "4" })}>
+            <Accordion defaultValue="accordion-2" multiple>
+                {
+                    [
+                        {
+                            key: "accordion-1",
+                            trigger: "Accordion 1",
+                            content: "Content 1",
+                        },
+                        {
+                            key: "accordion-2",
+                            trigger: "Accordion 2",
+                            content: "Content 2",
+                        },
+                        {
+                            key: "accordion-3",
+                            trigger: "Accordion 3",
+                            content: "Content 3",
+                        },
+                    ].map((item) => (
+                        <AccordionItem value={item.key}>
+                            <AccordionTrigger>{item.trigger}</AccordionTrigger>
+                            <AccordionContent>{item.content}</AccordionContent>
+                        </AccordionItem>
+                    ))
+                }
+            </Accordion>
+
+            <Accordion defaultValue="accordion-4" multiple>
+                {
+                    [
+                        {
+                            key: "accordion-2",
+                            trigger: "Accordion 4",
+                            content: "Content 4",
+                        },
+                        {
+                            key: "accordion-5",
+                            trigger: "Accordion 5",
+                            content: "Content 5",
+                        },
+                        {
+                            key: "accordion-6",
+                            trigger: "Accordion 6",
+                            content: "Content 6",
+                        },
+                    ].map((item) => (
+                        <AccordionItem value={item.key}>
+                            <AccordionTrigger>{item.trigger}</AccordionTrigger>
+                            <AccordionContent>{item.content}</AccordionContent>
+                        </AccordionItem>
+                    ))
+                }
+            </Accordion>
+        </div>
         <div class={hstack({ gap: "4" })}>
             <Card class={css({ maxW: "sm" })} variant="outline">
                 <CardHeader>
@@ -104,7 +166,7 @@ import {
                 </CardFooter>
             </Card>
 
-            <Card class={css({ maxW: "sm" })} variant="elevated">
+            <Card class={css({ maxW: "sm" })}>
                 <CardHeader>
                     <CardTitle>Card Title</CardTitle>
                     <CardDescription>Card Description</CardDescription>

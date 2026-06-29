@@ -7,6 +7,11 @@ export default defineConfig({
     version: "0.0.1",
     items: [
       {
+        name: "accordion",
+        type: "ui",
+        files: [{ path: "src/lib/registry/ui/accordion" }],
+      },
+      {
         name: "alert",
         type: "ui",
         files: [{ path: "src/lib/registry/ui/alert" }],

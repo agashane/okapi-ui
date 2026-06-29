@@ -1,0 +1,9 @@
+---
+import { cx } from "#styled-system/css";
+import { accordionRecipe } from "./accordion.recipe";
+
+const classes = cx(accordionRecipe().indicator);
+// TODO: React to accordion item state changes
+---
+
+<span class={classes}>+</span>

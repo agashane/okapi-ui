@@ -1,0 +1,20 @@
+---
+import { cx } from "#styled-system/css";
+import type { HTMLAttributes } from "astro/types";
+import { accordionRecipe } from "./accordion.recipe";
+
+type Props = HTMLAttributes<"div"> & { value: string; disabled?: boolean };
+
+const { class: className, value, disabled, ...rest } = Astro.props;
+const classes = cx(accordionRecipe().item, className);
+---
+
+<div
+    {...rest}
+    data-slot="accordion-item"
+    data-value={value}
+    data-disabled={disabled ? "" : undefined}
+    class={classes}
+>
+    <slot />
+</div>

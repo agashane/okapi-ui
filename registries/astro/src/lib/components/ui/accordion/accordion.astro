@@ -1,0 +1,40 @@
+---
+import { cx } from "#styled-system/css";
+import type { HTMLAttributes } from "astro/types";
+import { accordionRecipe } from "./accordion.recipe";
+
+type Props = HTMLAttributes<"div"> & {
+    multiple?: boolean;
+    defaultValue?: string | string[];
+    collapsible?: boolean;
+};
+
+const {
+    class: className,
+    multiple = false,
+    defaultValue,
+    collapsible = true,
+    ...rest
+} = Astro.props;
+const classes = cx(accordionRecipe().root, className);
+const rootDefaultValue = Array.isArray(defaultValue)
+    ? JSON.stringify(defaultValue)
+    : defaultValue;
+---
+
+<div
+    {...rest}
+    data-slot="accordion"
+    data-multiple={multiple ? "true" : undefined}
+    data-default-value={rootDefaultValue}
+    data-collapsible={collapsible ? undefined : "false"}
+    class={classes}
+>
+    <slot />
+</div>
+
+<script>
+    import { create } from "@data-slot/accordion";
+
+    create();
+</script>

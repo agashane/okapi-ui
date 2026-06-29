@@ -9,6 +9,132 @@
 	},
 	"items": [
 		{
+			"name": "accordion",
+			"type": "ui",
+			"add": "when-added",
+			"registryDependencies": [],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "accordion/accordion-content.astro",
+					"relativePath": "src/lib/registry/ui/accordion/accordion-content.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "accordion/accordion-indicator.astro",
+					"relativePath": "src/lib/registry/ui/accordion/accordion-indicator.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "accordion/accordion-item.astro",
+					"relativePath": "src/lib/registry/ui/accordion/accordion-item.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "accordion/accordion-trigger.astro",
+					"relativePath": "src/lib/registry/ui/accordion/accordion-trigger.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "accordion/accordion.astro",
+					"relativePath": "src/lib/registry/ui/accordion/accordion.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "accordion/accordion.recipe.ts",
+					"relativePath": "src/lib/registry/ui/accordion/accordion.recipe.ts",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "accordion/index.ts",
+					"relativePath": "src/lib/registry/ui/accordion/index.ts",
+					"_imports_": [
+						{
+							"import": "./accordion.astro",
+							"item": "accordion",
+							"file": {
+								"type": "ui",
+								"path": "accordion/accordion.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./accordion-item.astro",
+							"item": "accordion",
+							"file": {
+								"type": "ui",
+								"path": "accordion/accordion-item.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./accordion-trigger.astro",
+							"item": "accordion",
+							"file": {
+								"type": "ui",
+								"path": "accordion/accordion-trigger.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./accordion-content.astro",
+							"item": "accordion",
+							"file": {
+								"type": "ui",
+								"path": "accordion/accordion-content.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./accordion.recipe",
+							"item": "accordion",
+							"file": {
+								"type": "ui",
+								"path": "accordion/accordion.recipe.ts"
+							},
+							"meta": {}
+						}
+					],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
 			"name": "alert",
 			"type": "ui",
 			"add": "when-added",
