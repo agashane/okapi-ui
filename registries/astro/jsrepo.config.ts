@@ -7,6 +7,11 @@ export default defineConfig({
     version: "0.0.1",
     items: [
       {
+        name: "alert",
+        type: "ui",
+        files: [{ path: "src/lib/registry/ui/alert" }],
+      },
+      {
         name: "badge",
         type: "ui",
         files: [{ path: "src/lib/registry/ui/badge" }],

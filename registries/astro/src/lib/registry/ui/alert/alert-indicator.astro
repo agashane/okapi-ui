@@ -1,0 +1,12 @@
+---
+import { cx } from "#styled-system/css";
+import type { HTMLAttributes } from "astro/types";
+import { alertVariants } from "./alert.recipe";
+
+type Props = HTMLAttributes<"div">;
+
+const { class: className, ...rest } = Astro.props;
+const classes = cx(alertVariants().indicator, className);
+---
+
+<div class={classes} {...rest}><slot /></div>

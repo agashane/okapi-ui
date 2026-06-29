@@ -5,8 +5,8 @@ import { card, type CardVariants } from "./card.recipe";
 
 type Props = HTMLAttributes<"div"> & CardVariants;
 
-const { class: className, size, ...rest } = Astro.props;
-const classes = cx(card({ size }).root, className);
+const { class: className, variant, ...rest } = Astro.props;
+const classes = cx(card({ variant }).root, className);
 ---
 
 <div class={classes} {...rest}>

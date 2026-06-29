@@ -9,6 +9,132 @@
 	},
 	"items": [
 		{
+			"name": "alert",
+			"type": "ui",
+			"add": "when-added",
+			"registryDependencies": [],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "alert/alert-content.astro",
+					"relativePath": "src/lib/registry/ui/alert/alert-content.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "alert/alert-description.astro",
+					"relativePath": "src/lib/registry/ui/alert/alert-description.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "alert/alert-indicator.astro",
+					"relativePath": "src/lib/registry/ui/alert/alert-indicator.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "alert/alert-title.astro",
+					"relativePath": "src/lib/registry/ui/alert/alert-title.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "alert/alert.astro",
+					"relativePath": "src/lib/registry/ui/alert/alert.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "alert/alert.recipe.ts",
+					"relativePath": "src/lib/registry/ui/alert/alert.recipe.ts",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "alert/index.ts",
+					"relativePath": "src/lib/registry/ui/alert/index.ts",
+					"_imports_": [
+						{
+							"import": "./alert.astro",
+							"item": "alert",
+							"file": {
+								"type": "ui",
+								"path": "alert/alert.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./alert-content.astro",
+							"item": "alert",
+							"file": {
+								"type": "ui",
+								"path": "alert/alert-content.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./alert-description.astro",
+							"item": "alert",
+							"file": {
+								"type": "ui",
+								"path": "alert/alert-description.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./alert-title.astro",
+							"item": "alert",
+							"file": {
+								"type": "ui",
+								"path": "alert/alert-title.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./alert-indicator.astro",
+							"item": "alert",
+							"file": {
+								"type": "ui",
+								"path": "alert/alert-indicator.astro"
+							},
+							"meta": {}
+						}
+					],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
 			"name": "badge",
 			"type": "ui",
 			"add": "when-added",

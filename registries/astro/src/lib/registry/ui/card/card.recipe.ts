@@ -9,21 +9,18 @@ export const card = sva({
       flexDirection: "column",
       gap: "6",
       overflow: "hidden",
-      rounded: "xl",
+      rounded: "radius",
       py: "6",
-      textStyle: "sm",
-      boxShadow: "xs",
-      ring: "1px",
-      ringColor: "colorPalette.fg/10",
-      bg: "colorPalette.muted",
       color: "colorPalette.fg",
+      wordWrap: "break-word",
+      textAlign: "start",
     },
     header: {
       display: "grid",
       gridAutoRows: "min",
       alignItems: "start",
       gap: "1",
-      roundedTop: "xl",
+      roundedTop: "radius",
       px: "6",
     },
     body: {
@@ -33,28 +30,27 @@ export const card = sva({
     footer: {
       display: "flex",
       alignItems: "center",
-      roundedBottom: "xl",
+      roundedBottom: "radius",
       px: "6",
     },
   },
   variants: {
-    size: {
-      sm: {
-        root: { gap: "4", py: "4" },
-        header: { px: "4" },
-        body: { px: "4" },
-        footer: { px: "4" },
+    variant: {
+      outline: {
+        root: {
+          borderWidth: "1",
+          borderColor: "colorPalette.border",
+        },
       },
-      md: {
-        root: { gap: "6", py: "6" },
-        header: { px: "6" },
-        body: { px: "6" },
-        footer: { px: "6" },
+      subtle: {
+        root: {
+          bg: "colorPalette.muted",
+        },
       },
     },
   },
   defaultVariants: {
-    size: "md",
+    variant: "subtle",
   },
 });
 

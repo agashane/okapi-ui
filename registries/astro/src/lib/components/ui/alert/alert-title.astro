@@ -1,0 +1,13 @@
+---
+import type { ComponentProps } from "astro/types";
+import { Heading } from "../heading";
+import { cx } from "#styled-system/css";
+import { alertVariants } from "./alert.recipe";
+
+type Props = ComponentProps<typeof Heading>;
+
+const { class: className, level = "h6", as = "h6", ...rest } = Astro.props;
+const classes = cx(alertVariants().title, className);
+---
+
+<Heading level={level} as={as} class={classes} {...rest}><slot /></Heading>
