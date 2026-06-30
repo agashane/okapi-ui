@@ -5,38 +5,7 @@ import { Button } from "@components/ui/button";
 import { css } from "#styled-system/css";
 import { container, hstack } from "#styled-system/patterns";
 import { Heading } from "@components/ui/heading";
-import {
-    Card,
-    CardHeader,
-    CardBody,
-    CardDescription,
-    CardFooter,
-    CardTitle,
-} from "@components/ui/card";
-import { Span, Text } from "@components/ui/typography";
-import { Link } from "@components/ui/link";
-import {
-    Empty,
-    EmptyHeader,
-    EmptyContent,
-    EmptyMedia,
-    EmptyTitle,
-    EmptyDescription,
-} from "@components/ui/empty";
-import {
-    Alert,
-    AlertContent,
-    AlertTitle,
-    AlertDescription,
-    AlertIndicator,
-} from "@components/ui/alert";
-
-import {
-    Accordion,
-    AccordionItem,
-    AccordionContent,
-    AccordionTrigger,
-} from "@components/ui/accordion";
+import * as AlertDialog from "@components/ui/alert-dialog";
 ---
 
 <Layout>
@@ -48,199 +17,67 @@ import {
                 color: "warning.fg",
             })}>Welcome Astro</Heading
         >
-        <div class={hstack({ gap: "4" })}>
-            <Accordion defaultValue="accordion-2" multiple>
-                {
-                    [
-                        {
-                            key: "accordion-1",
-                            trigger: "Accordion 1",
-                            content: "Content 1",
-                        },
-                        {
-                            key: "accordion-2",
-                            trigger: "Accordion 2",
-                            content: "Content 2",
-                        },
-                        {
-                            key: "accordion-3",
-                            trigger: "Accordion 3",
-                            content: "Content 3",
-                        },
-                    ].map((item) => (
-                        <AccordionItem value={item.key}>
-                            <AccordionTrigger>{item.trigger}</AccordionTrigger>
-                            <AccordionContent>{item.content}</AccordionContent>
-                        </AccordionItem>
-                    ))
-                }
-            </Accordion>
+        <AlertDialog.Root>
+            <AlertDialog.Trigger> Dialog </AlertDialog.Trigger>
+            <AlertDialog.Portal>
+                <AlertDialog.Overlay />
+                <AlertDialog.Content>
+                    <AlertDialog.Header>
+                        <AlertDialog.Title>A good fake title</AlertDialog.Title>
+                        <AlertDialog.Description>
+                            Aone last time
+                        </AlertDialog.Description>
+                        <AlertDialog.Close>
+                            <Icon name="hugeicons:cancel-01" />
+                        </AlertDialog.Close>
+                    </AlertDialog.Header>
+                    <AlertDialog.Body>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Voluptas eum quis, aspernatur incidunt eveniet
+                            rerum ad illum sapiente voluptatum nulla tenetur
+                            maxime sed ut officia voluptatem expedita ducimus
+                            explicabo nihil.
+                        </p>
+                    </AlertDialog.Body>
+                    <AlertDialog.Footer>
+                        <AlertDialog.Cancel>Cancel</AlertDialog.Cancel>
+                        <AlertDialog.Action>Save</AlertDialog.Action>
+                    </AlertDialog.Footer>
+                </AlertDialog.Content>
+            </AlertDialog.Portal>
+        </AlertDialog.Root>
 
-            <Accordion defaultValue="accordion-4" multiple>
-                {
-                    [
-                        {
-                            key: "accordion-2",
-                            trigger: "Accordion 4",
-                            content: "Content 4",
-                        },
-                        {
-                            key: "accordion-5",
-                            trigger: "Accordion 5",
-                            content: "Content 5",
-                        },
-                        {
-                            key: "accordion-6",
-                            trigger: "Accordion 6",
-                            content: "Content 6",
-                        },
-                    ].map((item) => (
-                        <AccordionItem value={item.key}>
-                            <AccordionTrigger>{item.trigger}</AccordionTrigger>
-                            <AccordionContent>{item.content}</AccordionContent>
-                        </AccordionItem>
-                    ))
-                }
-            </Accordion>
-        </div>
-        <div class={hstack({ gap: "4" })}>
-            <Card class={css({ maxW: "sm" })} variant="outline">
-                <CardHeader>
-                    <CardTitle>Card Title</CardTitle>
-                    <CardDescription>Card Description</CardDescription>
-                </CardHeader>
-                <CardBody>
-                    <Text class={css({ colorPalette: "red" })}
-                        >Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.
-                        <Span>Odius</Span> repellendus sit rerum dicta fugiat, exercitationem
-                        quas hic. Reprehenderit atque ex officia dolores eligendi,
-                        at sapiente mollitia impedit, vel voluptate a!
-                    </Text>
-                </CardBody>
-                <CardFooter>
-                    <Button
-                        variant="subtle"
-                        css={{
-                            colorPalette: "indigo",
-                        }}
-                        pill>Learn More</Button
-                    >
-                </CardFooter>
-            </Card>
+        <AlertDialog.Root>
+            <AlertDialog.Trigger> Dialog 2</AlertDialog.Trigger>
+            <AlertDialog.Portal>
+                <AlertDialog.Overlay />
+                <AlertDialog.Content>
+                    <AlertDialog.Header>
+                        <AlertDialog.Title
+                            >A good fake title 2</AlertDialog.Title
+                        >
+                        <AlertDialog.Description>
+                            Aone last time
+                        </AlertDialog.Description>
+                    </AlertDialog.Header>
+                    <AlertDialog.Body>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Voluptas eum quis, aspernatur incidunt eveniet
+                            rerum ad illum sapiente voluptatum nulla tenetur
+                            maxime sed ut officia voluptatem expedita ducimus
+                            explicabo nihil. ...
+                        </p>
+                    </AlertDialog.Body>
+                    <AlertDialog.Footer>
+                        <AlertDialog.Cancel>Cancel</AlertDialog.Cancel>
+                        <AlertDialog.Action>Save</AlertDialog.Action>
+                    </AlertDialog.Footer>
+                </AlertDialog.Content>
+            </AlertDialog.Portal>
+        </AlertDialog.Root>
 
-            <Card class={css({ maxW: "sm" })}>
-                <CardHeader>
-                    <CardTitle>Card Title</CardTitle>
-                    <CardDescription>Card Description</CardDescription>
-                </CardHeader>
-                <CardBody>
-                    <Text class={css({ colorPalette: "orange" })}
-                        >Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.
-                        <Span muted>Odius</Span> repellendus sit rerum dicta fugiat,
-                        exercitationem quas hic. Reprehenderit atque ex <Link
-                            href="/"
-                            variant="plain"
-                            class={css({
-                                colorPalette: "amber",
-                            })}>officia</Link
-                        > dolores eligendi, at sapiente mollitia impedit, vel voluptate
-                        a!
-                    </Text>
-                </CardBody>
-                <CardFooter>
-                    <Button
-                        variant="subtle"
-                        class={css({
-                            colorPalette: "pink",
-                        })}
-                        pill>Learn More</Button
-                    >
-                </CardFooter>
-            </Card>
-
-            <Card class={css({ maxW: "sm" })}>
-                <CardHeader>
-                    <CardTitle>Card Title</CardTitle>
-                    <CardDescription>Card Description</CardDescription>
-                </CardHeader>
-                <CardBody>
-                    <Text class={css({ colorPalette: "orange" })}
-                        >Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit.
-                        <Span muted>Odius</Span> repellendus sit rerum dicta fugiat,
-                        exercitationem quas hic. Reprehenderit atque ex <Link
-                            href="/"
-                            variant="plain"
-                            class={css({
-                                colorPalette: "amber",
-                            })}>officia</Link
-                        > dolores eligendi, at sapiente mollitia impedit, vel voluptate
-                        a!
-                    </Text>
-                </CardBody>
-                <CardFooter>
-                    <Button
-                        variant="subtle"
-                        class={css({
-                            colorPalette: "pink",
-                        })}
-                        pill>Learn More</Button
-                    >
-                </CardFooter>
-            </Card>
-        </div>
-
-        <Empty>
-            <EmptyHeader>
-                <EmptyTitle> Nothing found </EmptyTitle>
-                <EmptyDescription>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Nemo facilis cumque quidem quas, ipsam modi. A accusamus,
-                    asperiores repudiandae et obcaecati veritatis ipsum,
-                    voluptatibus eveniet corporis mollitia fugiat vitae non.
-                </EmptyDescription>
-            </EmptyHeader>
-            <EmptyContent>
-                <Button>New item</Button>
-                <Button variant="subtle">Another item</Button>
-            </EmptyContent>
-        </Empty>
-
-        <Alert variant="solid" css={{ colorPalette: "amber" }}>
-            <AlertIndicator>
-                <Icon name="hugeicons:information-circle" />
-            </AlertIndicator>
-            <AlertContent>
-                <AlertTitle>Information</AlertTitle>
-                <AlertDescription>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                </AlertDescription>
-            </AlertContent>
-        </Alert>
-
-        <Alert variant="subtle" css={{ colorPalette: "red" }}>
-            <AlertIndicator>
-                <Icon name="hugeicons:alarm-clock" />
-            </AlertIndicator>
-            <AlertContent>
-                <AlertTitle>Information</AlertTitle>
-                <AlertDescription>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                </AlertDescription>
-            </AlertContent>
-        </Alert>
-        <Alert variant="outline" css={{ colorPalette: "success" }}>
-            <AlertIndicator>
-                <Icon name="hugeicons:bubble-chat-user" />
-            </AlertIndicator>
-            <AlertContent>
-                <AlertTitle>Information</AlertTitle>
-                <AlertDescription>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                </AlertDescription>
-            </AlertContent>
-        </Alert>
+        <Button css={{ colorPalette: "red" }} variant="subtle">A single</Button>
     </div>
 </Layout>

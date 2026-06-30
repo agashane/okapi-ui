@@ -7,7 +7,7 @@ import type { WithCSSProp } from "@lib/utils";
 type Props = WithCSSProp<HTMLAttributes<"div">>;
 
 const { css: cssProp, ...props } = Astro.props;
-const classes = css(alertDialogRecipe.raw().footer, cssProp);
+const classes = css(alertDialogRecipe.raw().body, cssProp);
 ---
 
-<div {...props} class={classes} data-slot="alert-dialog-footer"><slot /></div>
+<div {...props} class={classes} data-slot="alert-dialog-body"><slot /></div>

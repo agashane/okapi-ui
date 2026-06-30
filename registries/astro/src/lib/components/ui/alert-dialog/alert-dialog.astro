@@ -1,18 +1,37 @@
 ---
-import { cx } from "#styled-system/css";
+import { css } from "#styled-system/css";
 import type { HTMLAttributes } from "astro/types";
 import { alertDialogRecipe } from "./alert-dialog.recipe";
+import type { WithCSSProp } from "@lib/utils";
 
-type Props = HTMLAttributes<"div">;
+type Props = WithCSSProp<HTMLAttributes<"div">>;
 
-const { class: className, ...rest } = Astro.props;
-const classes = cx(alertDialogRecipe().root, className);
+const { css: cssProp, ...props } = Astro.props;
+const classes = css(alertDialogRecipe.raw().root, cssProp);
 ---
 
-<div {...rest} class={classes} data-slot="alert-dialog"><slot /></div>
+<div {...props} class={classes} data-slot="alert-dialog"><slot /></div>
 
 <script>
-    import { create } from "@data-slot/alert-dialog";
+    import { createAlertDialog } from "@data-slot/alert-dialog";
 
-    create();
+    // create();
+    const alertDialogs = document.querySelectorAll(
+        '[data-slot="alert-dialog"]',
+    );
+    alertDialogs.forEach((dialog) => {
+        const alertDialog = createAlertDialog(dialog!);
+
+        dialog
+            ?.querySelector('[data-slot="alert-dialog-overlay"]')
+            ?.addEventListener("click", () => {
+                alertDialog.close();
+            });
+
+        dialog
+            ?.querySelector('[data-slot="alert-dialog-close"]')
+            ?.addEventListener("click", () => {
+                alertDialog.close();
+            });
+    });
 </script>

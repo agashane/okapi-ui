@@ -1,0 +1,23 @@
+---
+import type { ComponentProps } from "astro/types";
+import { Button } from "../button";
+
+type Props = ComponentProps<typeof Button>;
+
+const { ...props } = Astro.props;
+---
+
+<Button
+    data-slot="alert-dialog-close"
+    variant="ghost"
+    css={{
+        pos: "absolute",
+        top: "4",
+        right: "4",
+        colorPalette: "neutral",
+    }}
+    iconOnly
+    {...props}
+>
+    <slot />
+</Button>

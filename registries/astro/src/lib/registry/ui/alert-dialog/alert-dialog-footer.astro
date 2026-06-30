@@ -1,12 +1,13 @@
 ---
-import { cx } from "#styled-system/css";
+import { css } from "#styled-system/css";
 import type { HTMLAttributes } from "astro/types";
 import { alertDialogRecipe } from "./alert-dialog.recipe";
+import type { WithCSSProp } from "@lib/utils";
 
-type Props = HTMLAttributes<"div">;
+type Props = WithCSSProp<HTMLAttributes<"div">>;
 
-const { class: className, ...rest } = Astro.props;
-const classes = cx(alertDialogRecipe().footer, className);
+const { css: cssProp, ...props } = Astro.props;
+const classes = css(alertDialogRecipe.raw().footer, cssProp);
 ---
 
-<div {...rest} class={classes} data-slot="alert-dialog-footer"><slot /></div>
+<div {...props} class={classes} data-slot="alert-dialog-footer"><slot /></div>

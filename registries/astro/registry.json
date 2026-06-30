@@ -193,8 +193,28 @@
 				{
 					"type": "ui",
 					"role": "file",
+					"path": "alert-dialog/alert-dialog-body.astro",
+					"relativePath": "src/lib/registry/ui/alert-dialog/alert-dialog-body.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
 					"path": "alert-dialog/alert-dialog-cancel.astro",
 					"relativePath": "src/lib/registry/ui/alert-dialog/alert-dialog-cancel.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "alert-dialog/alert-dialog-close.astro",
+					"relativePath": "src/lib/registry/ui/alert-dialog/alert-dialog-close.astro",
 					"_imports_": [],
 					"registryDependencies": [],
 					"dependencies": [],
@@ -402,6 +422,24 @@
 							"file": {
 								"type": "ui",
 								"path": "alert-dialog/alert-dialog-trigger.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./alert-dialog-body.astro",
+							"item": "alert-dialog",
+							"file": {
+								"type": "ui",
+								"path": "alert-dialog/alert-dialog-body.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./alert-dialog-close.astro",
+							"item": "alert-dialog",
+							"file": {
+								"type": "ui",
+								"path": "alert-dialog/alert-dialog-close.astro"
 							},
 							"meta": {}
 						},

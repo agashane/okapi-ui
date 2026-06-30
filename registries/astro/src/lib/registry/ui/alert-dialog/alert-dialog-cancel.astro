@@ -6,6 +6,11 @@ type Props = ComponentProps<typeof Button>;
 const { variant = "outline", ...props } = Astro.props;
 ---
 
-<Button variant={variant} data-slot="alert-dialog-trigger" {...props}>
+<Button
+    variant={variant}
+    data-slot="alert-dialog-cancel"
+    css={{ colorPalette: "red" }}
+    {...props}
+>
     <slot />
 </Button>
