@@ -10,17 +10,33 @@ import * as Avatar from "@components/ui/avatar";
 
 <Layout>
     <div class={container({ py: "4", spaceY: "4" })}>
-        <Heading
-            as="h1"
-            level="h1"
-            class={css({
-                color: "warning.fg",
-            })}>Welcome Astro</Heading
+        <Heading as="h1" level="h1" css={{ color: "orange.400" }}
+            >Welcome Astro</Heading
         >
         <div class={hstack({ gap: "4" })}>
             <Avatar.Root>
-                <Avatar.Fallback>IG</Avatar.Fallback>
+                <Avatar.Fallback name="IG" />
             </Avatar.Root>
+            <Avatar.Root size="lg">
+                <Avatar.Fallback name="Glorieux Irenge" />
+            </Avatar.Root>
+            <Avatar.Root size="sm">
+                <Avatar.Fallback name="Antoine-Glorieux Lukama" />
+            </Avatar.Root>
+            <Avatar.Group>
+                <Avatar.Root>
+                    <Avatar.Fallback name="Antoine-Glorieux Lukama" />
+                </Avatar.Root>
+                <Avatar.Root>
+                    <Avatar.Fallback name="Antoine-Glorieux Lukama" />
+                </Avatar.Root>
+                <Avatar.Root>
+                    <Avatar.Fallback name="Antoine-Glorieux Lukama" />
+                </Avatar.Root>
+                <Avatar.Root>
+                    <Avatar.GroupCount count={3} />
+                </Avatar.Root>
+            </Avatar.Group>
         </div>
     </div>
 </Layout>

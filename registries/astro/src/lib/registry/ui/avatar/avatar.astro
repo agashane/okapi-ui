@@ -7,7 +7,7 @@ import { avatarRecipe, type AvatarVariants } from "./avatar.recipe";
 type Props = WithCSSProp<HTMLAttributes<"div"> & AvatarVariants>;
 
 const { css: cssProp, size, ...props } = Astro.props;
-const classes = css(avatarRecipe.raw({ size }).root);
+const classes = css(avatarRecipe.raw({ size }).root, cssProp);
 ---
 
 <div class={classes} {...props}>

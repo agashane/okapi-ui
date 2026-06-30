@@ -696,6 +696,15 @@
 							"meta": {}
 						},
 						{
+							"import": "./avatar-group-count.astro",
+							"item": "avatar",
+							"file": {
+								"type": "ui",
+								"path": "avatar/avatar-group-count.astro"
+							},
+							"meta": {}
+						},
+						{
 							"import": "./avatar.recipe",
 							"item": "avatar",
 							"file": {

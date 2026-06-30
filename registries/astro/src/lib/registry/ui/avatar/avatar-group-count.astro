@@ -1,0 +1,13 @@
+---
+import { css } from "#styled-system/css";
+import type { WithCSSProp } from "@lib/utils";
+import type { HTMLAttributes } from "astro/types";
+import { avatarRecipe } from "./avatar.recipe";
+
+type Props = WithCSSProp<HTMLAttributes<"div"> & { count: number }>;
+
+const { count, css: cssProp, ...props } = Astro.props;
+const classes = css(avatarRecipe.raw().fallback, cssProp);
+---
+
+<span class={classes} {...props}>{`+${count}`}</span>

@@ -10,6 +10,9 @@ export const avatarRecipe = sva({
       pos: "relative",
       display: "flex",
       flexShrink: "0",
+      borderWidth: "2",
+      borderColor: "colorPalette.border",
+      zIndex: "-1",
     },
     fallback: {
       bg: "colorPalette.muted",
@@ -22,6 +25,15 @@ export const avatarRecipe = sva({
       alignItems: "center",
       justifyContent: "center",
       rounded: "full",
+    },
+    group: {
+      display: "flex",
+      flexDir: "row",
+      alignItems: "center",
+      spaceX: "-3",
+    },
+    image: {
+      // TODO: Complete image
     },
   },
   variants: {
