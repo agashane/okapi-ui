@@ -1,0 +1,13 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import type { WithCSSProp } from "@lib/utils";
+import { css } from "#styled-system/css";
+import { avatarRecipe } from "./avatar.recipe";
+
+type Props = WithCSSProp<HTMLAttributes<"span">>;
+
+const { css: cssProp, ...props } = Astro.props;
+const classes = css(avatarRecipe.raw().fallback, cssProp);
+---
+
+<span class={classes} {...props}><slot /></span>

@@ -5,7 +5,7 @@ import { Button } from "@components/ui/button";
 import { css } from "#styled-system/css";
 import { container, hstack } from "#styled-system/patterns";
 import { Heading } from "@components/ui/heading";
-import * as AlertDialog from "@components/ui/alert-dialog";
+import * as Avatar from "@components/ui/avatar";
 ---
 
 <Layout>
@@ -17,67 +17,10 @@ import * as AlertDialog from "@components/ui/alert-dialog";
                 color: "warning.fg",
             })}>Welcome Astro</Heading
         >
-        <AlertDialog.Root>
-            <AlertDialog.Trigger> Dialog </AlertDialog.Trigger>
-            <AlertDialog.Portal>
-                <AlertDialog.Overlay />
-                <AlertDialog.Content>
-                    <AlertDialog.Header>
-                        <AlertDialog.Title>A good fake title</AlertDialog.Title>
-                        <AlertDialog.Description>
-                            Aone last time
-                        </AlertDialog.Description>
-                        <AlertDialog.Close>
-                            <Icon name="hugeicons:cancel-01" />
-                        </AlertDialog.Close>
-                    </AlertDialog.Header>
-                    <AlertDialog.Body>
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing
-                            elit. Voluptas eum quis, aspernatur incidunt eveniet
-                            rerum ad illum sapiente voluptatum nulla tenetur
-                            maxime sed ut officia voluptatem expedita ducimus
-                            explicabo nihil.
-                        </p>
-                    </AlertDialog.Body>
-                    <AlertDialog.Footer>
-                        <AlertDialog.Cancel>Cancel</AlertDialog.Cancel>
-                        <AlertDialog.Action>Save</AlertDialog.Action>
-                    </AlertDialog.Footer>
-                </AlertDialog.Content>
-            </AlertDialog.Portal>
-        </AlertDialog.Root>
-
-        <AlertDialog.Root>
-            <AlertDialog.Trigger> Dialog 2</AlertDialog.Trigger>
-            <AlertDialog.Portal>
-                <AlertDialog.Overlay />
-                <AlertDialog.Content>
-                    <AlertDialog.Header>
-                        <AlertDialog.Title
-                            >A good fake title 2</AlertDialog.Title
-                        >
-                        <AlertDialog.Description>
-                            Aone last time
-                        </AlertDialog.Description>
-                    </AlertDialog.Header>
-                    <AlertDialog.Body>
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing
-                            elit. Voluptas eum quis, aspernatur incidunt eveniet
-                            rerum ad illum sapiente voluptatum nulla tenetur
-                            maxime sed ut officia voluptatem expedita ducimus
-                            explicabo nihil. ...
-                        </p>
-                    </AlertDialog.Body>
-                    <AlertDialog.Footer>
-                        <AlertDialog.Cancel>Cancel</AlertDialog.Cancel>
-                        <AlertDialog.Action>Save</AlertDialog.Action>
-                    </AlertDialog.Footer>
-                </AlertDialog.Content>
-            </AlertDialog.Portal>
-        </AlertDialog.Root>
-
-        <Button css={{ colorPalette: "red" }} variant="subtle">A single</Button>
+        <div class={hstack({ gap: "4" })}>
+            <Avatar.Root>
+                <Avatar.Fallback>IG</Avatar.Fallback>
+            </Avatar.Root>
+        </div>
     </div>
 </Layout>

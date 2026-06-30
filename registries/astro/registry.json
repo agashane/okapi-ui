@@ -586,6 +586,132 @@
 			]
 		},
 		{
+			"name": "avatar",
+			"type": "ui",
+			"add": "when-added",
+			"registryDependencies": [],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "avatar/avatar-fallback.astro",
+					"relativePath": "src/lib/registry/ui/avatar/avatar-fallback.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "avatar/avatar-group-count.astro",
+					"relativePath": "src/lib/registry/ui/avatar/avatar-group-count.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "avatar/avatar-group.astro",
+					"relativePath": "src/lib/registry/ui/avatar/avatar-group.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "avatar/avatar-image.astro",
+					"relativePath": "src/lib/registry/ui/avatar/avatar-image.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "avatar/avatar.astro",
+					"relativePath": "src/lib/registry/ui/avatar/avatar.astro",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "avatar/avatar.recipe.ts",
+					"relativePath": "src/lib/registry/ui/avatar/avatar.recipe.ts",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"type": "ui",
+					"role": "file",
+					"path": "avatar/index.ts",
+					"relativePath": "src/lib/registry/ui/avatar/index.ts",
+					"_imports_": [
+						{
+							"import": "./avatar.astro",
+							"item": "avatar",
+							"file": {
+								"type": "ui",
+								"path": "avatar/avatar.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./avatar-image.astro",
+							"item": "avatar",
+							"file": {
+								"type": "ui",
+								"path": "avatar/avatar-image.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./avatar-fallback.astro",
+							"item": "avatar",
+							"file": {
+								"type": "ui",
+								"path": "avatar/avatar-fallback.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./avatar-group.astro",
+							"item": "avatar",
+							"file": {
+								"type": "ui",
+								"path": "avatar/avatar-group.astro"
+							},
+							"meta": {}
+						},
+						{
+							"import": "./avatar.recipe",
+							"item": "avatar",
+							"file": {
+								"type": "ui",
+								"path": "avatar/avatar.recipe.ts"
+							},
+							"meta": {}
+						}
+					],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
 			"name": "badge",
 			"type": "ui",
 			"add": "when-added",

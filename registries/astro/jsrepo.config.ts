@@ -41,6 +41,11 @@ export default defineConfig({
           files: [{ path: "src/lib/registry/ui/alert" }],
         },
         {
+          name: "avatar",
+          type: "ui",
+          files: [{ path: "src/lib/registry/ui/avatar" }],
+        },
+        {
           name: "badge",
           type: "ui",
           files: [{ path: "src/lib/registry/ui/badge" }],
