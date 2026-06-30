@@ -1,13 +1,16 @@
 ---
-import { cx } from "#styled-system/css";
+import { css } from "#styled-system/css";
 import type { HTMLAttributes, HTMLTag, Polymorphic } from "astro/types";
 import { badge, type BadgeVariants } from "./badge.recipe";
+import type { WithCSSProp } from "@lib/utils";
 
-type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & BadgeVariants;
+type Props<Tag extends HTMLTag> = WithCSSProp<
+    Polymorphic<{ as: Tag }> & BadgeVariants
+>;
 
-const { class: className, variant, size, pill, ...rest } = Astro.props;
+const { variant, size, pill, css: cssProp, ...rest } = Astro.props;
 const Tag = "href" in rest ? "a" : "button";
-const classes = cx(badge({ variant, size, pill }), className);
+const classes = css(badge.raw({ variant, size, pill }), cssProp);
 ---
 
 <Tag class={classes} {...rest}>

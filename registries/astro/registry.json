@@ -1,13 +1,51 @@
 {
 	"name": "@okapi-ui/astro",
-	"version": "0.0.1",
+	"authors": [
+		"Antoine-Glorieux Lukama"
+	],
+	"bugs": "https://github.com/agashane/okapi-ui/issues",
+	"description": "",
+	"homepage": "https://okapi-ui.pages.dev",
+	"repository": "https://github.com/agashane/okapi-ui",
+	"tags": [
+		"astro",
+		"typescript",
+		"okapi-ui",
+		"components",
+		"utilities",
+		"pandacss"
+	],
+	"version": "package",
 	"type": "repository",
 	"defaultPaths": {
 		"component": "src/lib/components",
 		"block": "src/lib/components/block",
-		"ui": "src/lib/components/ui"
+		"ui": "src/lib/components/ui",
+		"lib": "src/lib",
+		"utils": "src/lib/utils"
 	},
 	"items": [
+		{
+			"name": "utils",
+			"description": "",
+			"type": "lib",
+			"add": "on-init",
+			"registryDependencies": [],
+			"dependencies": [],
+			"devDependencies": [],
+			"files": [
+				{
+					"type": "lib",
+					"role": "file",
+					"path": "utils.ts",
+					"relativePath": "src/lib/registry/utils/utils.ts",
+					"_imports_": [],
+					"registryDependencies": [],
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
 		{
 			"name": "accordion",
 			"type": "ui",

@@ -1,12 +1,13 @@
 ---
 import type { HTMLAttributes } from "astro/types";
-import { cx } from "#styled-system/css";
+import { css } from "#styled-system/css";
 import { alertVariants } from "./alert.recipe";
+import type { WithCSSProp } from "@lib/utils";
 
-type Props = HTMLAttributes<"p">;
+type Props = WithCSSProp<HTMLAttributes<"p">>;
 
-const { class: className, ...rest } = Astro.props;
-const classes = cx(alertVariants().description, className);
+const { css: cssProp, ...props } = Astro.props;
+const classes = css(alertVariants.raw().description, cssProp);
 ---
 
-<p class={classes} {...rest}><slot /></p>
+<p class={classes} {...props}><slot /></p>

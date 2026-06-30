@@ -1,14 +1,15 @@
 ---
-import { cx } from "#styled-system/css";
+import { css } from "#styled-system/css";
 import type { HTMLAttributes } from "astro/types";
 import { accordionRecipe } from "./accordion.recipe";
+import type { WithCSSProp } from "@lib/utils";
 
-type Props = HTMLAttributes<"div">;
+type Props = WithCSSProp<HTMLAttributes<"div">>;
 
-const { class: className, ...rest } = Astro.props;
-const classes = cx(accordionRecipe().content, className);
+const { css: cssProp, ...props } = Astro.props;
+const classes = css(accordionRecipe.raw().content, cssProp);
 ---
 
-<div data-slot="accordion-content" {...rest} class={classes}>
+<div data-slot="accordion-content" {...props} class={classes}>
     <slot />
 </div>

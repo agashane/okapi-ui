@@ -1,12 +1,13 @@
 ---
-import { cx } from "#/styled-system/css";
+import { css } from "#styled-system/css";
 import type { HTMLAttributes } from "astro/types";
 import { card, type CardVariants } from "./card.recipe";
+import type { WithCSSProp } from "@lib/utils";
 
-type Props = HTMLAttributes<"div"> & CardVariants;
+type Props = WithCSSProp<HTMLAttributes<"div"> & CardVariants>;
 
-const { class: className, size, ...rest } = Astro.props;
-const classes = cx(card({ size }).body, className);
+const { variant, css: cssProp, ...rest } = Astro.props;
+const classes = css(card.raw({ variant }).body, cssProp);
 ---
 
 <div class={classes} {...rest}>

@@ -5,11 +5,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "#/*": ["*"],
-      "#lib/*": ["src/lib/*"],
-      "#registry/*": ["src/lib/registry/*"],
-      "#components/*": ["src/lib/components/*"],
-      "#layouts/*": ["src/layouts/*"],
+      "@lib/*": ["src/lib/*"],
+      "@registry/*": ["src/lib/registry/*"],
+      "@components/*": ["src/lib/components/*"],
+      "@layouts/*": ["src/layouts/*"],
       "#styled-system/*": ["styled-system/*"]
     }
   }

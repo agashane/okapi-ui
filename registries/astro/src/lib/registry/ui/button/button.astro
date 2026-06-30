@@ -1,14 +1,29 @@
 ---
-import { cx } from "#styled-system/css";
+import { css } from "#styled-system/css";
 import type { HTMLTag, Polymorphic } from "astro/types";
 import { buttonVariants, type ButtonVariants } from "./button.recipe";
+import type { WithCSSProp } from "@lib/utils";
 
-type Props<Tag extends HTMLTag> = ButtonVariants & Polymorphic<{ as: Tag }>
+type Props<Tag extends HTMLTag> = WithCSSProp<
+    ButtonVariants & Polymorphic<{ as: Tag }>
+>;
 
-const { class: className, variant, size, iconOnly, pill, ...rest } = Astro.props
-const Tag = "href" in rest ? "a" : "button"
-const classes = cx(buttonVariants({ variant, size, iconOnly, pill }), className)
+const {
+    class: className,
+    variant,
+    size,
+    iconOnly,
+    pill,
+    css: cssProps,
+    ...rest
+} = Astro.props;
+const Tag = "href" in rest ? "a" : "button";
+const classes = css(
+    buttonVariants.raw({ variant, size, iconOnly, pill }),
+    cssProps,
+);
 ---
+
 <Tag class={classes} {...rest}>
-  <slot />
+    <slot />
 </Tag>

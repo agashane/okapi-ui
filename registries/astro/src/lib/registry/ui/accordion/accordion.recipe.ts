@@ -17,6 +17,10 @@ export const accordionRecipe = sva({
       flexDir: "column",
       w: "full",
       alignItems: "stretch",
+
+      "&[data-state=open] [data-slot=accordion-trigger-icon]": {
+        transform: "rotate(45deg)",
+      },
     },
     content: {
       overflow: "hidden",

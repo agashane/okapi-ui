@@ -1,12 +1,13 @@
 ---
-import { cx } from "#styled-system/css";
+import { css } from "#styled-system/css";
 import type { HTMLAttributes } from "astro/types";
 import { emptyVariants } from "./empty.recipe";
+import type { WithCSSProp } from "@lib/utils";
 
-type Props = HTMLAttributes<"div">;
+type Props = WithCSSProp<HTMLAttributes<"div">>;
 
-const { class: className, ...rest } = Astro.props;
-const classes = cx(emptyVariants().root, className);
+const { css: cssProp, ...props } = Astro.props;
+const classes = css(emptyVariants.raw().root, cssProp);
 ---
 
-<div class={classes} {...rest}><slot /></div>
+<div class={classes} {...props}><slot /></div>

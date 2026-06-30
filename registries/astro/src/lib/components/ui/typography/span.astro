@@ -1,13 +1,15 @@
 ---
-import { cx } from "#styled-system/css";
+import { css } from "#styled-system/css";
 import type { HTMLAttributes } from "astro/types";
 import { textVariants, type TextVariants } from "./typography.recipe";
+import type { WithCSSProp } from "@lib/utils";
 
-type Props = HTMLAttributes<"span"> & TextVariants
+type Props = WithCSSProp<HTMLAttributes<"span"> & TextVariants>;
 
-const { class: className, size, weight, muted, lead, ...rest } = Astro.props
-const classes = cx(textVariants({ size, weight, muted, lead }), className)
+const { css: cssProp, size, weight, muted, lead, ...props } = Astro.props;
+const classes = css(textVariants.raw({ size, weight, muted, lead }), cssProp);
 ---
-<span class={classes} {...rest}>
-  <slot />
+
+<span class={classes} {...props}>
+    <slot />
 </span>

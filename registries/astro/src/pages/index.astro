@@ -1,10 +1,10 @@
 ---
 import { Icon } from "@dallay/astro-icon/components";
-import Layout from "#layouts/index.astro";
-import { Button } from "#components/ui/button";
+import Layout from "@layouts/index.astro";
+import { Button } from "@components/ui/button";
 import { css } from "#styled-system/css";
 import { container, hstack } from "#styled-system/patterns";
-import { Heading } from "#lib/components/ui/heading";
+import { Heading } from "@components/ui/heading";
 import {
     Card,
     CardHeader,
@@ -12,9 +12,9 @@ import {
     CardDescription,
     CardFooter,
     CardTitle,
-} from "#lib/components/ui/card";
-import { Span, Text } from "#lib/components/ui/typography";
-import { Link } from "#lib/components/ui/link";
+} from "@components/ui/card";
+import { Span, Text } from "@components/ui/typography";
+import { Link } from "@components/ui/link";
 import {
     Empty,
     EmptyHeader,
@@ -22,21 +22,21 @@ import {
     EmptyMedia,
     EmptyTitle,
     EmptyDescription,
-} from "#lib/components/ui/empty";
+} from "@components/ui/empty";
 import {
     Alert,
     AlertContent,
     AlertTitle,
     AlertDescription,
     AlertIndicator,
-} from "#/src/lib/registry/ui/alert";
+} from "@components/ui/alert";
 
 import {
     Accordion,
     AccordionItem,
     AccordionContent,
     AccordionTrigger,
-} from "#lib/components/ui/accordion";
+} from "@components/ui/accordion";
 ---
 
 <Layout>
@@ -110,26 +110,20 @@ import {
                     <CardDescription>Card Description</CardDescription>
                 </CardHeader>
                 <CardBody>
-                    <Text class={css({ colorPalette: "orange" })}
+                    <Text class={css({ colorPalette: "red" })}
                         >Lorem ipsum dolor sit amet consectetur adipisicing
                         elit.
-                        <Span muted>Odius</Span> repellendus sit rerum dicta fugiat,
-                        exercitationem quas hic. Reprehenderit atque ex <Link
-                            href="/"
-                            variant="plain"
-                            class={css({
-                                colorPalette: "amber",
-                            })}>officia</Link
-                        > dolores eligendi, at sapiente mollitia impedit, vel voluptate
-                        a!
+                        <Span>Odius</Span> repellendus sit rerum dicta fugiat, exercitationem
+                        quas hic. Reprehenderit atque ex officia dolores eligendi,
+                        at sapiente mollitia impedit, vel voluptate a!
                     </Text>
                 </CardBody>
                 <CardFooter>
                     <Button
                         variant="subtle"
-                        class={css({
-                            colorPalette: "pink",
-                        })}
+                        css={{
+                            colorPalette: "indigo",
+                        }}
                         pill>Learn More</Button
                     >
                 </CardFooter>
@@ -214,12 +208,7 @@ import {
             </EmptyContent>
         </Empty>
 
-        <Alert
-            data-variant="solid"
-            class={css({
-                colorPalette: "primary",
-            })}
-        >
+        <Alert variant="solid" css={{ colorPalette: "amber" }}>
             <AlertIndicator>
                 <Icon name="hugeicons:information-circle" />
             </AlertIndicator>
@@ -231,12 +220,7 @@ import {
             </AlertContent>
         </Alert>
 
-        <Alert
-            variant="subtle"
-            class={css({
-                colorPalette: "success",
-            })}
-        >
+        <Alert variant="subtle" css={{ colorPalette: "red" }}>
             <AlertIndicator>
                 <Icon name="hugeicons:alarm-clock" />
             </AlertIndicator>
@@ -247,12 +231,7 @@ import {
                 </AlertDescription>
             </AlertContent>
         </Alert>
-        <Alert
-            variant="outline"
-            class={css({
-                colorPalette: "purple",
-            })}
-        >
+        <Alert variant="outline" css={{ colorPalette: "success" }}>
             <AlertIndicator>
                 <Icon name="hugeicons:bubble-chat-user" />
             </AlertIndicator>
