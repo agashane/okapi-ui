@@ -1,0 +1,27 @@
+{
+  "name": "@okapi-ui/astro-registry",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "prepare": "panda codegen",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@okapi-ui/panda-preset": "workspace:*",
+    "astro": "^7.3.8"
+  },
+  "devDependencies": {
+    "@astrojs/ts-plugin": "^1.10.12",
+    "@pandacss/dev": "catalog:",
+    "@pandacss/preset-base": "catalog:",
+    "@pandacss/preset-panda": "catalog:",
+    "@pandacss/preset-typography": "catalog:",
+    "@pandacss/vite": "catalog:"
+  }
+}

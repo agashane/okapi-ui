@@ -1,0 +1,25 @@
+---
+import Layout from "#layouts/layout.astro";
+
+import { container, hstack } from "#styled-system/patterns";
+import { css } from "#styled-system/css";
+import { Button } from "#okapi/astro/ui/button";
+---
+
+<Layout>
+    <div class={container({ gap: "4" })}>
+        <h1>Astro</h1>
+        <div class={hstack({ gap: "4" })}>
+            <Button>First button</Button>
+            <Button variant="ghost" size="lg">
+                First button
+            </Button>
+            <Button variant="subtle" css={css({ colorPalette: "orange" })}>
+                First button
+            </Button>
+            <Button size="sm" class={css({ colorPalette: "red", rounded: "xl" })}>
+                First button
+            </Button>
+        </div>
+    </div>
+</Layout>
