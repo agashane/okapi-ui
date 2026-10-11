@@ -1132,44 +1132,44 @@ export const colors = defineSemanticTokens.colors({
   primary: {
     contrast: {
       value: {
-        base: "white",
-        _dark: "white",
+        base: "{colors.white}",
+        _dark: "{colors.black}",
       },
     },
     fg: {
       value: {
-        base: "{colors.sky.700}",
-        _dark: "{colors.sky.300}",
+        base: "{colors.slate.800}",
+        _dark: "{colors.slate.200}",
       },
     },
     subtle: {
       value: {
-        base: "{colors.sky.100}",
-        _dark: "{colors.sky.900}",
+        base: "{colors.slate.100}",
+        _dark: "{colors.slate.900}",
       },
     },
     muted: {
       value: {
-        base: "{colors.sky.200}",
-        _dark: "{colors.sky.800}",
+        base: "{colors.slate.200}",
+        _dark: "{colors.slate.800}",
       },
     },
     solid: {
       value: {
-        base: "{colors.sky.600}",
-        _dark: "{colors.sky.600}",
+        base: "{colors.slate.900}",
+        _dark: "{colors.white}",
       },
     },
     focusRing: {
       value: {
-        base: "{colors.sky.500}",
-        _dark: "{colors.sky.500}",
+        base: "{colors.slate.400}",
+        _dark: "{colors.slate.400}",
       },
     },
     border: {
       value: {
-        base: "{colors.sky.500}",
-        _dark: "{colors.sky.400}",
+        base: "{colors.slate.200}",
+        _dark: "{colors.slate.800}",
       },
     },
   },

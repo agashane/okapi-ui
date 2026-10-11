@@ -1,0 +1,12 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { card, type CardVariantProps } from "#styled-system/recipes/card";
+
+interface Props extends HTMLAttributes<"div">, CardVariantProps {}
+
+const { variant, class: className, ...props } = Astro.props;
+---
+
+<div class:list={[card({ variant }).footer, className]} {...props}>
+    <slot />
+</div>

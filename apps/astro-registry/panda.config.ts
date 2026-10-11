@@ -4,6 +4,7 @@ import { preset as okapiUiPreset } from "@okapi-ui/panda-preset";
 export default defineConfig({
   presets: ["@pandacss/preset-base", "@pandacss/preset-panda", okapiUiPreset],
   preflight: true,
+  shorthands: true,
   include: ["./src/**/*.{astro,js,ts}"],
   exclude: [],
   theme: {

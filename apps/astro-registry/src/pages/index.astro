@@ -3,23 +3,68 @@ import Layout from "#layouts/layout.astro";
 
 import { container, hstack } from "#styled-system/patterns";
 import { css } from "#styled-system/css";
-import { Button } from "#okapi/astro/ui/button";
+import { Button } from "#components/ui/button";
+import { Badge } from "#components/ui/badge";
+import * as Card from "#components/ui/card";
 ---
 
 <Layout>
-    <div class={container({ gap: "4" })}>
+    <div class={container({ spaceY: "4" })}>
         <h1>Astro</h1>
         <div class={hstack({ gap: "4" })}>
-            <Button>First button</Button>
+            <Button size="xs">First button</Button>
             <Button variant="ghost" size="lg">
                 First button
             </Button>
-            <Button variant="subtle" css={css({ colorPalette: "orange" })}>
+            <Button variant="subtle" class={css({ colorPalette: "orange" })}>
                 First button
             </Button>
-            <Button size="sm" class={css({ colorPalette: "red", rounded: "xl" })}>
+            <Button
+                size="sm"
+                class={css({ colorPalette: "red", rounded: "xl" })}
+            >
                 First button
             </Button>
         </div>
+        <div class={hstack({ gap: "4" })}>
+            {["badge", "tag", "tech", "ui", "tip"].map((t) => (
+                <Badge>{t}</Badge>
+            ))}
+        </div>
+        <Card.Root>
+            <Card.Header>
+                <h3>Card Header</h3>
+            </Card.Header>
+            <Card.Body>
+                <p>Card body</p>
+            </Card.Body>
+            <Card.Footer>
+                <p>Card footer</p>
+            </Card.Footer>
+        </Card.Root>
+
+        <Card.Root variant="outline">
+            <Card.Header>
+                <h3>Card Header</h3>
+            </Card.Header>
+            <Card.Body>
+                <p>Card body</p>
+            </Card.Body>
+            <Card.Footer>
+                <p>Card footer</p>
+            </Card.Footer>
+        </Card.Root>
+
+        <Card.Root variant="plain">
+            <Card.Header>
+                <h3>Card Header</h3>
+            </Card.Header>
+            <Card.Body>
+                <p>Card body</p>
+            </Card.Body>
+            <Card.Footer>
+                <p>Card footer</p>
+            </Card.Footer>
+        </Card.Root>
     </div>
 </Layout>

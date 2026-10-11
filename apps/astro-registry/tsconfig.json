@@ -5,7 +5,7 @@
   "compilerOptions": {
     "paths": {
       "#layouts/*": ["./src/layouts/*"],
-      "#okapi/*": ["./src/okapi/*"],
+      "#components/*": ["./src/components/*"],
       "#styled-system/*": ["./styled-system/*"],
     },
     "plugins": [

@@ -1,0 +1,27 @@
+---
+import type { HTMLTag, Polymorphic } from "astro/types";
+import { button, type ButtonVariantProps } from "#styled-system/recipes";
+import { cx } from "#styled-system/css";
+
+type Props<Tag extends HTMLTag> = {
+    loading?: boolean;
+} & ButtonVariantProps &
+    Polymorphic<{ as: Tag }>;
+
+const {
+    variant,
+    size,
+    loading = false,
+    class: className,
+    ...props
+} = Astro.props;
+const Tag = "href" in props ? "a" : "button";
+---
+
+<Tag class:list={[button({ variant, size }), className]} {...props}>
+    {loading && <span>L</span>}
+
+    {!loading && <slot name="left-icon" />}
+    <slot />
+    {!loading && <slot name="right-icon" />}
+</Tag>

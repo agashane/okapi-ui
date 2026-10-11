@@ -1,5 +1,9 @@
+import { badgeRecipe } from "./badge";
 import { buttonRecipe } from "./button";
 
-export const recipes = {
+import type { RecipeConfig } from "@pandacss/types";
+
+export const recipes: Record<string, RecipeConfig> = {
   button: buttonRecipe,
+  badge: badgeRecipe,
 };
