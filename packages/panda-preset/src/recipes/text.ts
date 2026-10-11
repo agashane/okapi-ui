@@ -1,0 +1,36 @@
+import { defineRecipe } from "@pandacss/dev";
+import type { RecipeConfig } from "@pandacss/types";
+
+export const textRecipe: RecipeConfig = defineRecipe({
+  className: "text",
+  base: {
+    colorPalette: "neutral",
+    color: "colorPalette.fg",
+    textWrap: "balance",
+  },
+  variants: {
+    size: {
+      xs: { fontSize: "xs", lineHeight: "1.25" },
+      sm: { fontSize: "sm", lineHeight: "1.375" },
+      md: { fontSize: "base", lineHeight: "1.5" },
+      lg: { fontSize: "lg", lineHeight: "1.5" },
+      xl: { fontSize: "xl", lineHeight: "1.5" },
+    },
+    weight: {
+      normal: { fontWeight: "normal" },
+      medium: { fontWeight: "medium" },
+      semibold: { fontWeight: "semibold" },
+      bold: { fontWeight: "bold" },
+    },
+    muted: {
+      true: { color: "colorPalette.muted" },
+    },
+    lead: {
+      true: { fontSize: "lg", lineHeight: "1.75" },
+    },
+  },
+  defaultVariants: {
+    size: "md",
+    weight: "normal",
+  },
+});

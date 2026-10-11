@@ -1,0 +1,11 @@
+---
+import type {HTMLTag, Polymorphic} from "astro/types"
+import {heading, type HeadingVariantProps} from "#styled-system/recipes"
+
+type Props<Tag extends HTMLTag = "h2"> = HeadingVariantProps & Polymorphic<{ as: Tag }>
+
+const {as: Tag = "h2", level = "h2", class: className,...props} = Astro.props
+---
+<Tag class:list={[heading({ level }), className]} {...props}>
+  <slot />
+</Tag>

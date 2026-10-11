@@ -1,0 +1,12 @@
+---
+import type { ComponentProps } from "astro/types";
+import { Text } from "../text";
+
+interface Props extends ComponentProps<typeof Text> {}
+
+const { size = "sm", ...props } = Astro.props;
+---
+
+<Text size={size} {...props}>
+    <slot />
+</Text>

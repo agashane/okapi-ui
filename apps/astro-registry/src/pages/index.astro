@@ -5,20 +5,33 @@ import { container, hstack } from "#styled-system/patterns";
 import { css } from "#styled-system/css";
 import { Button } from "#components/ui/button";
 import { Badge } from "#components/ui/badge";
+import { Heading } from "#components/ui/heading";
 import * as Card from "#components/ui/card";
+import * as Navbar from "#components/ui/navbar";
 ---
 
 <Layout>
+    <Navbar.Root boxed>
+        <Navbar.Start>
+            <p>Logo</p>
+        </Navbar.Start>
+        <Navbar.Content>
+            <p>Main content</p>
+        </Navbar.Content>
+        <Navbar.End>
+            <p>End nav</p>
+        </Navbar.End>
+    </Navbar.Root>
     <div class={container({ spaceY: "4" })}>
-        <h1>Astro</h1>
+        <Heading as="h1" level="h3">
+            Astro
+        </Heading>
         <div class={hstack({ gap: "4" })}>
             <Button size="xs">First button</Button>
             <Button variant="ghost" size="lg">
                 First button
             </Button>
-            <Button variant="subtle" class={css({ colorPalette: "orange" })}>
-                First button
-            </Button>
+            <Button variant="subtle">First button</Button>
             <Button
                 size="sm"
                 class={css({ colorPalette: "red", rounded: "xl" })}
@@ -33,7 +46,8 @@ import * as Card from "#components/ui/card";
         </div>
         <Card.Root>
             <Card.Header>
-                <h3>Card Header</h3>
+                <Card.Title>Card Header</Card.Title>
+                <Card.Description>A simple description</Card.Description>
             </Card.Header>
             <Card.Body>
                 <p>Card body</p>
