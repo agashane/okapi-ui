@@ -1,8 +1,14 @@
 import { defineConfig } from "@pandacss/dev";
+import typography from "@pandacss/preset-typography";
 import { preset as okapiUiPreset } from "@okapi-ui/panda-preset";
 
 export default defineConfig({
-  presets: ["@pandacss/preset-base", "@pandacss/preset-panda", okapiUiPreset],
+  presets: [
+    "@pandacss/preset-base",
+    "@pandacss/preset-panda",
+    typography(),
+    okapiUiPreset,
+  ],
   preflight: true,
   shorthands: true,
   include: ["./src/**/*.{astro,js,ts}"],

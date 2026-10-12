@@ -8,6 +8,10 @@ import { Badge } from "#components/ui/badge";
 import { Heading } from "#components/ui/heading";
 import * as Card from "#components/ui/card";
 import * as Navbar from "#components/ui/navbar";
+import { getCollection } from "astro:content";
+import { linkOverlay } from "#styled-system/patterns/link-overlay";
+
+const posts = await getCollection("blog");
 ---
 
 <Layout>
@@ -44,41 +48,21 @@ import * as Navbar from "#components/ui/navbar";
                 <Badge>{t}</Badge>
             ))}
         </div>
-        <Card.Root>
-            <Card.Header>
-                <Card.Title>Card Header</Card.Title>
-                <Card.Description>A simple description</Card.Description>
-            </Card.Header>
-            <Card.Body>
-                <p>Card body</p>
-            </Card.Body>
-            <Card.Footer>
-                <p>Card footer</p>
-            </Card.Footer>
-        </Card.Root>
-
-        <Card.Root variant="outline">
-            <Card.Header>
-                <h3>Card Header</h3>
-            </Card.Header>
-            <Card.Body>
-                <p>Card body</p>
-            </Card.Body>
-            <Card.Footer>
-                <p>Card footer</p>
-            </Card.Footer>
-        </Card.Root>
-
-        <Card.Root variant="plain">
-            <Card.Header>
-                <h3>Card Header</h3>
-            </Card.Header>
-            <Card.Body>
-                <p>Card body</p>
-            </Card.Body>
-            <Card.Footer>
-                <p>Card footer</p>
-            </Card.Footer>
-        </Card.Root>
+        {posts.map((post) => (
+            <Card.Root class={css({ pos: "relative" })}>
+                <Card.Header>
+                    <Card.Title>{post.data.title}</Card.Title>
+                </Card.Header>
+                <Card.Footer>
+                    <Button
+                        as="a"
+                        href={`/blog/${post.id}`}
+                        class={linkOverlay()}
+                    >
+                        Lire
+                    </Button>
+                </Card.Footer>
+            </Card.Root>
+        ))}
     </div>
 </Layout>
