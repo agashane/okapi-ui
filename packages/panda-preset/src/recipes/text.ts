@@ -4,7 +4,7 @@ import type { RecipeConfig } from "@pandacss/types";
 export const textRecipe: RecipeConfig = defineRecipe({
   className: "text",
   base: {
-    colorPalette: "neutral",
+    colorPalette: "grayscale",
     color: "colorPalette.fg",
     textWrap: "balance",
   },

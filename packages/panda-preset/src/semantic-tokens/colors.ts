@@ -1349,4 +1349,48 @@ export const colors = defineSemanticTokens.colors({
       },
     },
   },
+  grayscale: {
+    contrast: {
+      value: {
+        base: "{colors.white}",
+        _dark: "{colors.black}",
+      },
+    },
+    fg: {
+      value: {
+        base: "{colors.gray.800}",
+        _dark: "{colors.gray.200}",
+      },
+    },
+    subtle: {
+      value: {
+        base: "{colors.gray.100}",
+        _dark: "{colors.gray.900}",
+      },
+    },
+    muted: {
+      value: {
+        base: "{colors.gray.200}",
+        _dark: "{colors.gray.800}",
+      },
+    },
+    solid: {
+      value: {
+        base: "{colors.gray.900}",
+        _dark: "{colors.white}",
+      },
+    },
+    focusRing: {
+      value: {
+        base: "{colors.gray.400}",
+        _dark: "{colors.gray.400}",
+      },
+    },
+    border: {
+      value: {
+        base: "{colors.gray.200}",
+        _dark: "{colors.gray.800}",
+      },
+    },
+  },
 });

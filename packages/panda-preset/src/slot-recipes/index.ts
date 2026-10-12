@@ -1,9 +1,15 @@
 import type { SlotRecipeConfig } from "@pandacss/types";
 
-import { cardRecipe } from "./card";
+import { cardSlotRecipe } from "./card";
 import { navbarSlotRecipe } from "./navbar";
+import { breadcrumbSlotRecipe } from "./breadcrumb";
+import { bannerSlotRecipe } from "./banner";
+import { emptyStateSlotRecipe } from "./empty-state";
 
 export const slotRecipes: Record<string, SlotRecipeConfig> = {
-  card: cardRecipe,
+  banner: bannerSlotRecipe,
+  breadcrumb: breadcrumbSlotRecipe,
+  card: cardSlotRecipe,
+  emptyState: emptyStateSlotRecipe,
   navbar: navbarSlotRecipe,
 };

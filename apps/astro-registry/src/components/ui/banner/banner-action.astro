@@ -1,0 +1,24 @@
+---
+import { banner } from "#styled-system/recipes/banner";
+import type { HTMLAttributes } from "astro/types";
+import { Button } from "../button";
+
+interface Props extends HTMLAttributes<"div"> {
+    close?: boolean;
+}
+const { class: className, close = false, ...props } = Astro.props;
+---
+
+<div
+    class:list={[banner().action, className]}
+    data-slot="banner-action"
+    {...props}
+>
+    {close ? (
+        <Button variant="ghost" iconOnly>
+            X
+        </Button>
+    ) : (
+        <slot />
+    )}
+</div>

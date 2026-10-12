@@ -4,7 +4,6 @@ import type { RecipeConfig } from "@pandacss/types";
 export const badgeRecipe: RecipeConfig = defineRecipe({
   className: "badge",
   base: {
-    colorPalette: "primary",
     display: "inline-flex",
     alignItems: "center",
     fontWeight: "medium",

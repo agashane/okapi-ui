@@ -1,0 +1,24 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { banner, type BannerVariantProps } from "#styled-system/recipes/banner";
+
+interface Props extends HTMLAttributes<"div">, BannerVariantProps {}
+
+const {
+    variant,
+    size,
+    floating,
+    stripped,
+    class: className,
+    ...props
+} = Astro.props;
+---
+
+<div
+    class:list={[banner({ variant, size, floating, stripped }).root, className]}
+    role="banner"
+    data-slot="banner"
+    {...props}
+>
+    <slot />
+</div>

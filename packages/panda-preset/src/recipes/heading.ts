@@ -8,6 +8,8 @@ export const headingRecipe: RecipeConfig = defineRecipe({
     lineHeight: "1.25",
     m: "0",
     textWrap: "pretty",
+    colorPalette: "grayscale",
+    color: "colorPalette.fg",
   },
   variants: {
     level: {
